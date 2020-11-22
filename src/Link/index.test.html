@@ -1,0 +1,21 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script type="module">
+      import { runTests } from "@web/test-runner-mocha";
+      import { expect } from "@esm-bundle/chai";
+      import { Link } from "./index.js";
+
+      runTests(async () => {
+        describe("Link", () => {
+          it("returns 'Learn hydro-js'", () => {
+            expect(Link().textContent).to.equal("Learn hydro-js");
+          });
+        });
+      });
+    </script>
+  </head>
+  <body></body>
+</html>

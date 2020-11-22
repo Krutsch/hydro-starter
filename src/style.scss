@@ -1,0 +1,32 @@
+@import 'tailwindcss/dist/base.css';
+
+body {
+  background-color: #24272d;
+  display: grid;
+  font-size: 1.75em;
+  height: 100vh;
+}
+
+.center {
+  margin: auto;
+  text-align: center;
+
+  img {
+    border-radius: 10%;
+    margin-bottom: 1.5rem;
+    object-fit: contain;
+  }
+
+  p {
+    color: #fff;
+  }
+
+  a {
+    color: hsl(207.2, 78.8%, 64.9%);
+  }
+
+  h1 {
+    color: #fff;
+    font-size: 1em;
+  }
+}
