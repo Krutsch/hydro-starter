@@ -9,6 +9,6 @@ glob("src/**/*.js", {}, (err, files) => {
 
   files.forEach((filename) => {
     const fileText = fs.readFileSync(filename, { encoding: "utf-8" });
-    fs.writeFileSync(filename, fileText.replace(/(import .*?css)/, "//$1"));
+    fs.writeFileSync(filename, fileText.replace(/(import .*?css)/g, "//$1"));
   });
 });
