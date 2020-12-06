@@ -1,4 +1,6 @@
-@import 'tailwindcss/dist/base.css';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 body {
   background-color: #24272d;
@@ -11,22 +13,9 @@ body {
   margin: auto;
   text-align: center;
 
-  img {
+  & img {
     border-radius: 10%;
     margin-bottom: 1.5rem;
     object-fit: contain;
-  }
-
-  p {
-    color: #fff;
-  }
-
-  a {
-    color: hsl(207.2, 78.8%, 64.9%);
-  }
-
-  h1 {
-    color: #fff;
-    font-size: 1em;
   }
 }

@@ -1,22 +1,22 @@
 import { render, html } from "hydro-js";
 import { Link } from "./Link";
-import "./style.scss";
-const img = new URL("./splash.webp", import.meta.url);
+import "./index.css";
+import img from "./splash.webp";
 
-// HMR
 render(
   html`<main class="center">
     <img
       loading="lazy"
-      src=${img.href}
+      src=${img}
       height="350"
       width="623"
       alt="Splash of Water"
     />
-    <p>Edit src/index.js and save to reload.</p>
+    <p class="text-white">Edit src/index.js and save to reload.</p>
     ${Link()}
   </main>`,
   ".center"
 );
 
+// HMR
 import.meta.hot?.accept();

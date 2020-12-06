@@ -1,5 +1,5 @@
 {
-  "include": ["src"],
+  "include": ["src", "types"],
   "exclude": ["src/**/*.test.html"],
   "compilerOptions": {
     "module": "esnext",

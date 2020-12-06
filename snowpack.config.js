@@ -1,19 +1,28 @@
+const sharp = require("sharp");
+
 module.exports = {
   mount: {
     public: "/",
     src: "/_dist_",
   },
   plugins: [
+    "@snowpack/plugin-typescript",
+    "@snowpack/plugin-postcss",
     [
-      "@snowpack/plugin-run-script",
+      "snowpack-plugin-sharp",
       {
-        cmd: "npm run lint:code && npm run lint:style",
-        watch: 'watch "$1" src',
+        transformers: [
+          {
+            fileExt: ".webp",
+            apply: (file) =>
+              sharp(file).webp({
+                quality: 60,
+              }),
+          },
+        ],
       },
     ],
-    "@snowpack/plugin-typescript",
-    "@snowpack/plugin-sass",
-    "@snowpack/plugin-webpack",
+    "@snowpack/plugin-optimize",
   ],
   installOptions: {
     treeshake: true,
