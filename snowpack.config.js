@@ -22,7 +22,7 @@ module.exports = {
         ],
       },
     ],
-    "@snowpack/plugin-optimize",
+    ["@snowpack/plugin-optimize", { preloadCSS: true }],
   ],
   installOptions: {
     treeshake: true,

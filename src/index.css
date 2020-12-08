@@ -11,7 +11,7 @@ body {
 
 .center {
   margin: auto;
-  text-align: center;
+  @apply text-center;
 
   & img {
     border-radius: 10%;

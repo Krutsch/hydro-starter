@@ -1,6 +1,5 @@
 const postcssPresetEnv = require("postcss-preset-env");
 const tailwindcss = require("tailwindcss");
-const purgecss = require("@fullhuman/postcss-purgecss");
 const autoprefixer = require("autoprefixer");
 // const stylelint = require("stylelint"); // Currently broken because stylelint uses v7 of postcss
 
@@ -12,9 +11,8 @@ module.exports = {
         "nesting-rules": true,
       },
     }),
-    tailwindcss(),
-    purgecss({
-      content: ["./src/**/*.html", "./src/**/*.ts"],
+    tailwindcss({
+      purge: ["./**/*.ts"],
     }),
     // stylelint(),
     autoprefixer(),
