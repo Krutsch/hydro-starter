@@ -12,6 +12,7 @@ A simple set-up with snowpack.<br>
 - Tailwind CSS
 - Postcss
 - Tests, that can be written in HTML and run by Chrome, Firefox or Safari
+- Image optimization
 - Hot Module Replacement
 
 ## Roadmap

@@ -14,6 +14,7 @@ module.exports = {
         transformers: [
           {
             fileExt: ".webp",
+            withPreview: (file) => sharp(file).webp({ quality: 1 }),
             apply: (file) =>
               sharp(file).webp({
                 quality: 60,
