@@ -2,20 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  background-color: #24272d;
-  display: grid;
-  font-size: 1.75em;
-  height: 100vh;
-}
-
-.center {
-  margin: auto;
-  @apply text-center;
-
-  & img {
-    border-radius: 10%;
-    margin-bottom: 1.5rem;
-    object-fit: contain;
+@layer components {
+  .center {
+    & .learn {
+      color: hsl(207.2, 78.8%, 64.9%);
+    }
   }
 }

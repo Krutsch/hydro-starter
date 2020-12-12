@@ -7,9 +7,10 @@ import withPreview from "./withPreview.js";
 import { Link } from "./Link";
 
 render(
-  html`<main class="center">
+  html`<main class="m-auto center text-center">
     <picture>
       <img
+        class="object-contain rounded-none sm:rounded-3xl mb-6"
         loading="lazy"
         src=${withPreview(img)}
         data-src=${img}

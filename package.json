@@ -2,13 +2,13 @@
   "scripts": {
     "start": "snowpack dev",
     "start:secure": "snowpack dev --secure",
-    "build": "snowpack build",
+    "build": "snowpack build && node utils/postbuildMinify.js",
     "test": "tsc -b ts.test.json && node utils/disableCSS.js  && wtr src/**/*.test.html --node-resolve --coverage && tsc -b --clean ts.test.json",
     "update": "npx npm-check-updates -u && npm i && npm outdated"
   },
   "dependencies": {
     "hydro-js": "^1.2.3",
-    "tailwindcss": "^2.0.1"
+    "tailwindcss": "^2.0.2"
   },
   "devDependencies": {
     "@esm-bundle/chai": "^4.1.5",
@@ -16,16 +16,17 @@
     "@snowpack/plugin-postcss": "^1.0.10",
     "@snowpack/plugin-typescript": "^1.1.1",
     "@types/snowpack-env": "^2.3.2",
-    "@web/test-runner": "^0.10.0",
+    "@web/test-runner": "^0.10.1",
     "autoprefixer": "^10.1.0",
     "glob": "^7.1.6",
+    "html-minifier": "^4.0.0",
     "postcss": "^8.2.1",
     "postcss-cli": "^8.3.0",
     "postcss-preset-env": "^6.7.0",
     "sharp": "^0.26.3",
-    "snowpack": "^2.18.2",
+    "snowpack": "^2.18.3",
     "snowpack-plugin-sharp": "^1.0.3",
     "stylelint": "^13.8.0",
-    "typescript": "^4.1.2"
+    "typescript": "^4.1.3"
   }
 }

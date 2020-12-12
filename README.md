@@ -17,6 +17,5 @@ A simple set-up with snowpack.<br>
 
 ## Roadmap
 
-- Prerendering
 - stylelint
 - PWA
