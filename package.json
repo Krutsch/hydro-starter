@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "hydro-js": "^1.2.3",
+    "progressive-picture": "^2.0.0",
     "tailwindcss": "^2.0.2"
   },
   "devDependencies": {
@@ -21,7 +22,7 @@
     "glob": "^7.1.6",
     "html-minifier": "^4.0.0",
     "postcss": "^8.2.1",
-    "postcss-cli": "^8.3.0",
+    "postcss-cli": "^8.3.1",
     "postcss-preset-env": "^6.7.0",
     "sharp": "^0.26.3",
     "snowpack": "^2.18.3",

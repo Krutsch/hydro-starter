@@ -1,9 +1,9 @@
 import { render, html } from "hydro-js";
-import "./LazyImage"; // Once per App
+import "progressive-picture"; // Once per App
+import withPreview from "./withPreview.js";
 
 import "./index.css";
 import img from "./splash.webp";
-import withPreview from "./withPreview.js";
 import { Link } from "./Link";
 
 render(

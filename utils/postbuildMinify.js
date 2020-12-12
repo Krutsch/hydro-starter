@@ -14,7 +14,9 @@ glob("build/**/*.{js,html}", {}, (err, files) => {
 
     if (
       filename.endsWith(".html") ||
-      (filename.endsWith(".js") && fileText.includes("html as "))
+      (filename.endsWith(".js") &&
+        (fileText.includes("html as ") ||
+          fileText.includes(".insertAdjacentHTML(")))
     ) {
       fs.writeFileSync(
         filename,
