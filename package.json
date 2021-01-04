@@ -7,7 +7,7 @@
     "update": "npx npm-check-updates -u && npm i && npm outdated"
   },
   "dependencies": {
-    "hydro-js": "^1.2.5",
+    "hydro-js": "^1.2.6",
     "progressive-picture": "^2.0.0",
     "tailwindcss": "^2.0.2"
   },
