@@ -25,12 +25,6 @@ module.exports = {
     ],
     ["@snowpack/plugin-optimize", { preloadCSS: true }],
   ],
-  optimize: {
-    treeshake: true,
-  },
-  devOptions: {
-    open: "none",
-  },
   alias: {
     "@src": "./src",
   },
