@@ -1,20 +1,16 @@
 {
-  "include": ["src", "types"],
-  "exclude": ["src/**/*.test.html"],
+  "include": ["src"],
+  "exclude": ["node_modules"],
   "compilerOptions": {
+    "target": "esnext",
     "module": "esnext",
-    "target": "es2020",
-    "moduleResolution": "node",
-    "allowSyntheticDefaultImports": true,
-    "importsNotUsedAsValues": "error",
-    "isolatedModules": true,
-    "noEmit": true,
+    "lib": ["esnext", "DOM", "DOM.Iterable", "WebWorker"],
+    "checkJs": true,
     "strict": true,
+    "moduleResolution": "node",
+    "typeRoots": ["node_modules/@types"],
+    "esModuleInterop": true,
     "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true,
-    "resolveJsonModule": true,
-    "useDefineForClassFields": true,
-    "baseUrl": "./",
-    "paths": { "*": ["web_modules/.types/*"] },
+    "forceConsistentCasingInFileNames": true
   }
 }
