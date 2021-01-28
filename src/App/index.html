@@ -2,7 +2,6 @@
   import { render, html, ternary, reactive, getValue } from "hydro-js";
 
   const Link = reactive(fetch("Link/").then((d) => d.text()));
-
   render(
     html`<main class="m-auto center text-center">
       <picture>
@@ -17,9 +16,17 @@
           data-alt="Splash of Water"
         />
       </picture>
-      <p class="text-white">Edit src/index.js and save to reload.</p>
+      <p class="text-white">Edit src/index.js and save to reload!</p>
       ${ternary(Link, () => html`${getValue(Link)}`, "")}
     </main>`,
     ".center"
   );
+</script>
+
+<script type="module">
+  import("https://unpkg.com/comlink/dist/umd/comlink.js").then(async () => {
+    const worker = new Worker("App/worker.js");
+    const obj = Comlink.wrap(worker);
+    console.log(await obj.fib(1476));
+  });
 </script>
