@@ -1,0 +1,25 @@
+<script type="module">
+  import { render, html, ternary, reactive, getValue } from "hydro-js";
+
+  const Link = reactive(fetch("Link/").then((d) => d.text()));
+
+  render(
+    html`<main class="m-auto center text-center">
+      <picture>
+        <img
+          class="object-contain rounded-none sm:rounded-3xl mb-6"
+          loading="lazy"
+          src="splash.webp"
+          data-src="splash-preview.webp"
+          height="350"
+          width="623"
+          alt=""
+          data-alt="Splash of Water"
+        />
+      </picture>
+      <p class="text-white">Edit src/index.js and save to reload.</p>
+      ${ternary(Link, () => html`${getValue(Link)}`, "")}
+    </main>`,
+    ".center"
+  );
+</script>

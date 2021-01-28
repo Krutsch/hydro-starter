@@ -4,18 +4,19 @@ This project was bootstrapped with [Create Hydro App](https://github.com/Krutsch
 
 # hydro-starter ⚡️
 
-A simple set-up with snowpack.<br>
+A simple set-up.<br>
 ➡ This contains:
 
 - hydro-js
 - TypeScript
 - Tailwind CSS
-- Postcss
+- PostCSS
 - Tests, that can be written in HTML and run by Chrome, Firefox or Safari
 - Image optimization
 - Hot Module Replacement
 
 ## Roadmap
 
-- stylelint
+- Router
 - PWA
+- stylelint
