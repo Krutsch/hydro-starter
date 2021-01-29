@@ -1,3 +1,5 @@
+const isProduction = process.env.NODE_ENV === "production";
+
 module.exports = {
   plugins: {
     "postcss-preset-env": {
@@ -8,7 +10,7 @@ module.exports = {
     },
     tailwindcss: {
       purge: {
-        enabled: true,
+        enabled: isProduction,
         content: ["./src/**/*.html"],
       },
       darkMode: false,
@@ -19,8 +21,12 @@ module.exports = {
       plugins: [],
     },
     autoprefixer: {},
-    cssnano: {
-      preset: "advanced",
-    },
+    ...(isProduction
+      ? {
+          cssnano: {
+            preset: "advanced",
+          },
+        }
+      : {}),
   },
 };
