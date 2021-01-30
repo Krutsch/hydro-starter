@@ -4,7 +4,7 @@ import { worker } from "./@types";
 // import * as Comlink from "comlink";
 
 // Meanwhile
-importScripts("https://unpkg.com/comlink/dist/umd/comlink.min.js");
+importScripts("https://unpkg.com/comlink@4.3.0/dist/umd/comlink.min.js");
 
 const worker = {
   fib(n: number) {
