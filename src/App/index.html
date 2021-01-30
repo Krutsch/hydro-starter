@@ -24,9 +24,6 @@
 </script>
 
 <script type="module">
-  import("https://unpkg.com/comlink/dist/umd/comlink.js").then(async () => {
-    const worker = new Worker("App/worker.js");
-    const obj = Comlink.wrap(worker);
-    console.log(await obj.fib(1476));
-  });
+  import worker from "../worker.js";
+  worker.fib(1476).then((res) => console.log(res));
 </script>
