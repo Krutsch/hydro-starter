@@ -8,8 +8,8 @@
         <img
           class="object-contain rounded-none sm:rounded-3xl mb-6"
           loading="lazy"
-          src="splash.webp"
-          data-src="splash-preview.webp"
+          src="@public/splash.webp"
+          data-src="@public/splash-preview.webp"
           height="350"
           width="623"
           alt=""
@@ -24,6 +24,6 @@
 </script>
 
 <script type="module">
-  import worker from "../worker.js";
+  import worker from "../@public/worker.js";
   worker.fib(1476).then((res) => console.log(res));
 </script>

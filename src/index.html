@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="Description" content="Starter App for hydro-js" />
     <title>hydro-js App</title>
-    <link rel="preload" href="worker.js" as="script" />
-    <link rel="prefetch" href="workerCode.js" />
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="preload" href="@public/worker.js" as="script" />
+    <link rel="prefetch" href="@public/workerCode.js" />
+    <link rel="shortcut icon" href="@public/favicon.ico" type="image/x-icon" />
     <script type="module">
       import "progressive-picture"; // Once per App
       import { render, html, ternary, reactive, getValue } from "hydro-js";
@@ -15,7 +15,7 @@
       const App = reactive(fetch("App/").then((d) => d.text()));
       render(html`${ternary(App, () => html`${getValue(App)}`, "")}`);
     </script>
-    <link rel="stylesheet" href="base.css" />
+    <link rel="stylesheet" href="@public/base.css" />
   </head>
   <body>
     <main class="center"></main>

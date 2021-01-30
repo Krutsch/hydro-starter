@@ -8,10 +8,10 @@ A simple set-up.<br>
 ➡ This contains:
 
 - hydro-js
+- Comlink
 - TypeScript
 - Tailwind CSS
 - PostCSS
-- Comlink
 - Tests, that can be written in HTML and run by Chrome, Firefox or Safari
 - Image optimization
 - Hot Module Replacement

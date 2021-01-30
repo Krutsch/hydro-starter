@@ -1,4 +1,4 @@
-import { worker } from "./@types";
+import { worker } from "../@types";
 
 // If module worker are supported in Firefox and Safari
 // import * as Comlink from "comlink";
