@@ -9,10 +9,10 @@
     <link rel="shortcut icon" href="@public/favicon.ico" type="image/x-icon" />
     <script type="module">
       import "progressive-picture"; // Once per App
-      import { render, html, ternary, reactive, getValue } from "hydro-js";
+      import { render, html } from "hydro-js";
+      import fetchAndRender from "./@public/fetchHTML.js";
 
-      const App = reactive(fetch("App/").then((d) => d.text()));
-      render(html`${ternary(App, () => html`${getValue(App)}`, "")}`);
+      fetchAndRender({ url: "App/", shouldRender: true });
     </script>
     <link rel="stylesheet" href="@public/base.css" />
   </head>

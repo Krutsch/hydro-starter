@@ -1,9 +1,20 @@
 <script type="module">
-  import { render, html, ternary, reactive, getValue } from "hydro-js";
+  import {
+    html,
+    h,
+    render,
+    ternary,
+    reactive,
+    getValue,
+    unset,
+  } from "hydro-js";
+  import fetchHTML from "../@public/fetchHTML.js";
 
-  const Link = reactive(fetch("Link/").then((d) => d.text()));
+  const Link = reactive(
+    fetchHTML({ url: "Link/", errorHandler: () => unset(Link) })
+  );
   render(
-    html/*html*/ `<main class="m-auto center text-center">
+    <main class="m-auto center text-center">
       <picture>
         <img
           class="object-contain rounded-none sm:rounded-3xl mb-6"
@@ -17,8 +28,8 @@
         />
       </picture>
       <p class="text-white">Edit App/index.html and save to reload!</p>
-      ${ternary(Link, () => html`${getValue(Link)}`, "")}
-    </main>`,
+      {ternary(Link, () => html`${getValue(Link)}`, <p>Loading ...</p>)}
+    </main>,
     ".center"
   );
 </script>

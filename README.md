@@ -15,6 +15,7 @@ A simple set-up.<br>
 - Tests, that can be written in HTML and run by Chrome, Firefox or Safari
 - Image optimization
 - Hot Module Replacement
+- JSX / TSX
 
 ## Roadmap
 
