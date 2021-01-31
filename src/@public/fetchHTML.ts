@@ -2,7 +2,7 @@ import { render, html, setShouldSetReactivity } from "hydro-js";
 
 export type fetchHTMLParams = {
   url: string;
-  shouldRender: boolean;
+  shouldRender?: boolean;
   locator?: ReturnType<typeof document.querySelector> | string;
   errorHandler?: Function;
 };
@@ -13,7 +13,9 @@ export default function fetchHTML({
   locator,
   errorHandler,
 }: fetchHTMLParams) {
-  setShouldSetReactivity(false);
+  if (shouldRender) {
+    setShouldSetReactivity(false);
+  }
   return fetch(url)
     .then((res) => res.text())
     .then((t) => (shouldRender ? render(html`${t}`, locator!) : t))
