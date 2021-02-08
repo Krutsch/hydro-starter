@@ -10,7 +10,7 @@
     "comlink": "^4.3.0",
     "hydro-js": "^1.2.12",
     "progressive-picture": "^2.0.0",
-    "tailwindcss": "^2.0.2"
+    "tailwindcss": "^2.0.3"
   },
   "devDependencies": {
     "@esm-bundle/chai": "^4.3.0",
