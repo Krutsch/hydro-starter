@@ -16,9 +16,9 @@ A simple set-up.<br>
 - Image optimization
 - Hot Module Replacement
 - JSX / TSX
+- PWA
 
 ## Roadmap
 
 - Router
-- PWA
 - stylelint

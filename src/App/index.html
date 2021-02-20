@@ -8,10 +8,11 @@
     getValue,
     unset,
   } from "hydro-js";
-  import fetchHTML from "../@public/fetchHTML.js";
+  document.head.append(html`<link rel="prefetch" href="link/" />`);
+  import fetchHTML from "../@shared/fetchHTML.js";
 
   const Link = reactive(
-    fetchHTML({ url: "Link/", errorHandler: () => unset(Link) })
+    fetchHTML({ url: "link/", errorHandler: () => unset(Link) })
   );
   render(
     <main class="m-auto center text-center">
@@ -27,14 +28,14 @@
           data-alt="Splash of Water"
         />
       </picture>
-      <p class="text-white">Edit App/index.html and save to reload!</p>
+      <p class="text-white">Edit app/index.html and save to reload!</p>
       {ternary(Link, () => html`${getValue(Link)}`, <p>Loading ...</p>)}
     </main>,
-    ".center"
+    "main.center"
   );
 </script>
 
 <script type="module">
-  import worker from "../@public/worker.js";
+  import worker from "../@shared/worker.js";
   worker.fib(1476).then((res) => console.log(res));
 </script>

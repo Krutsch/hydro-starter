@@ -7,9 +7,9 @@
     <script type="module">
       import { expect } from "@esm-bundle/chai";
       import { $ } from "hydro-js";
-      import fetchAndRun from "./utils/fetchAndRun.js";
+      import fetchAndRun from "../utils/fetchAndRun.js";
 
-      fetchAndRun("../build/Link/", () => {
+      fetchAndRun("../../build/link/", () => {
         describe("Link", () => {
           it("returns 'Learn hydro-js'", () => {
             expect($(".learn").textContent).to.equal("Learn hydro-js.");

@@ -1,16 +1,22 @@
 {
   "type": "module",
   "scripts": {
-    "start": "node utils/build.js && html-bundle --hmr",
+    "dev": "node utils/build.js && html-bundle --hmr --secure",
     "build": "node utils/build.js && html-bundle --critical",
-    "test": "wtr Tests/**/*.html --node-resolve --coverage",
+    "serve": "html-bundle --serveOnly --secure",
+    "test": "wtr tests/**/*.html --node-resolve --coverage",
     "update": "npx npm-check-updates -u && npm i && npm outdated"
   },
   "dependencies": {
     "comlink": "^4.3.0",
+    "html-bundle": "^5.3.7",
     "hydro-js": "^1.2.12",
     "progressive-picture": "^2.0.0",
-    "tailwindcss": "^2.0.3"
+    "tailwindcss": "^2.0.3",
+    "workbox-cacheable-response": "^6.1.0",
+    "workbox-expiration": "^6.1.0",
+    "workbox-routing": "^6.1.0",
+    "workbox-strategies": "^6.1.0"
   },
   "devDependencies": {
     "@esm-bundle/chai": "^4.3.0",
@@ -19,7 +25,7 @@
     "cssnano": "^4.1.10",
     "cssnano-preset-advanced": "^4.0.7",
     "glob": "^7.1.6",
-    "html-bundle": "^5.3.6",
+    "node-json-minify": "^1.0.0",
     "postcss": "^8.2.6",
     "postcss-preset-env": "^6.7.0",
     "sharp": "^0.27.1",

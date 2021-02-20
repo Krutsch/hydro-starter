@@ -12,5 +12,6 @@ export default function fetchAndRun(file, fn) {
     .then((t) => {
       render(html`${t}`);
       runTests(fn);
-    });
+    })
+    .catch((e) => console.error(e));
 }

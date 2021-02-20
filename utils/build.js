@@ -1,6 +1,13 @@
-import { mkdirSync, copyFileSync, rmSync } from "fs";
+import {
+  mkdirSync,
+  copyFileSync,
+  rmSync,
+  writeFileSync,
+  readFileSync,
+} from "fs";
 import glob from "glob";
 import sharp from "sharp";
+import minifyJSON from "node-json-minify";
 
 const SOURCE_FOLDER = "src";
 const BUILD_FOLDER = "build";
@@ -11,12 +18,38 @@ rmSync(BUILD_FOLDER, { recursive: true, force: true });
 glob("src/**/*.!(js|ts|html|css)", {}, (err, files) => {
   if (err) throw err;
 
-  icoHandler(files.filter((f) => f.endsWith("ico")));
-  imageHandler(files.filter((f) => f.endsWith("webp")));
+  copyFiles(files.filter((f) => f.endsWith(".ico")));
+  jsonHandler(files.filter((f) => f.endsWith(".json")));
+  iconHandler(files.filter((f) => /icon\d+\.png/.test(f)));
+  imageHandler(files.filter((f) => f.endsWith(".webp")));
+
+  console.log(`🛠️  Pre-build finished.`);
 });
 
-function icoHandler(files) {
+function copyFiles(files) {
   files.forEach(copyFile);
+}
+
+function jsonHandler(files) {
+  files.forEach((file) =>
+    writeFileSync(
+      toBuildFile(file),
+      minifyJSON(readFileSync(file, { encoding: "utf-8" }))
+    )
+  );
+}
+
+function iconHandler(files) {
+  files.forEach((file) => {
+    sharp(file)
+      .png({
+        quality: 60,
+      })
+      .toFile(toBuildFile(file))
+      .catch((err) => {
+        console.error(err);
+      });
+  });
 }
 
 function imageHandler(files) {
