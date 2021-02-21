@@ -39,7 +39,7 @@ registerRoute(
   })
 );
 
-// Cache images with CacheFirst and expiration time
+// Cache images with CacheFirst and 7 days expiration time
 registerRoute(
   ({ request }) => request.destination === "image",
   new CacheFirst({

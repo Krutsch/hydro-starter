@@ -9,8 +9,8 @@
   },
   "dependencies": {
     "comlink": "^4.3.0",
-    "html-bundle": "^5.3.7",
-    "hydro-js": "^1.2.12",
+    "html-bundle": "^5.3.8",
+    "hydro-js": "^1.2.13",
     "progressive-picture": "^2.0.0",
     "tailwindcss": "^2.0.3",
     "workbox-cacheable-response": "^6.1.0",
