@@ -6,6 +6,7 @@
   "background_color": "#000",
   "theme_color": "#24272d",
   "description": "A starter Web App",
+  "prefer_related_applications": false,
   "icons": [
     {
       "src": "@public/icon48.png",

@@ -2,7 +2,8 @@
   "type": "module",
   "scripts": {
     "dev": "node utils/build.js && html-bundle --hmr --secure",
-    "build": "node utils/build.js && html-bundle --critical",
+    "prebuild": "node utils/build.js",
+    "build": "html-bundle --critical",
     "serve": "html-bundle --serveOnly --secure",
     "test": "wtr tests/**/*.html --node-resolve --coverage",
     "update": "npx npm-check-updates -u && npm i && npm outdated"
