@@ -8,7 +8,12 @@
 
     <link rel="preconnect" href="https://unpkg.com/" />
     <link rel="preload" href="app/" as="fetch" type="text/html" crossorigin />
-    <link rel="prefetch" href="@shared/workerCode.js" />
+    <link
+      rel="prefetch"
+      href="@shared/workerCode.js"
+      as="worker"
+      type="application/javascript"
+    />
     <!-- preload as worker does not work in Chrome (https://bugs.chromium.org/p/chromium/issues/detail?id=593267) -->
 
     <link rel="shortcut icon" href="@public/favicon.ico" type="image/x-icon" />
