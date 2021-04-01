@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "comlink": "^4.3.0",
-    "html-bundle": "^5.4.1",
+    "html-bundle": "^5.4.2",
     "hydro-js": "^1.2.14",
     "progressive-picture": "^2.0.0",
     "tailwindcss": "^2.0.4",
