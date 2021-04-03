@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script type="module">
+      import { expect } from "@esm-bundle/chai";
+      import { $ } from "hydro-js";
+      import fetchAndRun from "../utils/fetchAndRun.js";
+
+      fetchAndRun("../../build/link/", () => {
+        describe("Link", () => {
+          it("returns 'Learn hydro-js'", () => {
+            expect($(".learn").textContent).to.equal("Learn hydro-js.");
+          });
+        });
+      });
+    </script>
+  </head>
+  <body></body>
+</html>
