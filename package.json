@@ -3,14 +3,14 @@
   "scripts": {
     "dev": "node utils/build.js && html-bundle --hmr --secure",
     "prebuild": "node utils/prebuild.js",
-    "build": "html-bundle",
+    "build": "html-bundle --critical --csp",
     "serve": "html-bundle --serveOnly --secure",
     "test": "wtr test/**/*.html --node-resolve --coverage",
     "update": "npx npm-check-updates -u && npm i && npm outdated"
   },
   "dependencies": {
     "comlink": "^4.3.0",
-    "html-bundle": "^5.4.2",
+    "html-bundle": "^5.4.3",
     "hydro-js": "^1.2.14",
     "progressive-picture": "^2.0.0",
     "tailwindcss": "^2.1.1",
