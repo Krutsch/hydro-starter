@@ -12,11 +12,11 @@ A simple set-up.<br>
 - TypeScript
 - Tailwind CSS
 - PostCSS
-- Tests, that can be written in HTML and run by Chrome, Firefox or Safari
-- Image optimization
-- Hot Module Replacement
-- JSX / TSX
 - PWA
+- JSX
+- Image optimization
+- Web Test Runner
+- Hot Module Replacement
 
 ## Roadmap
 

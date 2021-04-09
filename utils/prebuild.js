@@ -18,6 +18,7 @@ rmSync(BUILD_FOLDER, { recursive: true, force: true });
 glob("src/**/*.!(js|ts|html|css)", {}, (err, files) => {
   if (err) throw err;
 
+  copyFiles(["src/_headers"]);
   copyFiles(files.filter((f) => f.endsWith(".ico")));
   jsonHandler(files.filter((f) => f.endsWith(".json")));
   iconHandler(files.filter((f) => /icon\d+\.png/.test(f)));

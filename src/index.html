@@ -21,19 +21,13 @@
     <link rel="manifest" href="manifest.json" />
     <meta name="theme-color" content="#24272d" />
 
-    <script type="module">
-      if ("serviceWorker" in navigator) {
-        window.addEventListener("load", () => {
-          navigator.serviceWorker.register("sw.js");
-        });
-      }
-    </script>
-    <script type="module">
-      import "progressive-picture"; // Once per App
+    <script type="module" nonce="Y1yFhBd68NSeEnOQm033amSEhTEE7HcbU/BCEmP7yyM">
       import { render, html } from "hydro-js";
       import fetchAndRender from "./@shared/fetchHTML.js";
+      import "progressive-picture";
 
       fetchAndRender({ url: "app/", shouldRender: true });
+      navigator.serviceWorker.register("sw.js");
     </script>
     <link rel="stylesheet" href="@public/base.css" />
   </head>
