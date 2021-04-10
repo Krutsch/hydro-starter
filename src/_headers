@@ -2,4 +2,3 @@
   X-Content-Type-Options: nosniff
   X-Frame-Options: DENY
   X-XSS-Protection: 1; mode=block
-  Content-Security-Policy: script-src https: 'nonce-Y1yFhBd68NSeEnOQm033amSEhTEE7HcbU/BCEmP7yyM' 'strict-dynamic';
