@@ -23,7 +23,7 @@
     "@esm-bundle/chai": "^4.3.4",
     "@web/test-runner": "^0.12.19",
     "autoprefixer": "^10.2.5",
-    "cssnano": "^4.1.11",
+    "cssnano": "^5.0.0",
     "cssnano-preset-advanced": "^4.0.8",
     "glob": "^7.1.6",
     "node-json-minify": "^1.0.0",
