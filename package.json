@@ -1,10 +1,12 @@
 {
   "type": "module",
   "scripts": {
-    "dev": "node utils/build.js && html-bundle --hmr --secure",
+    "predev": "npm run prebuild",
+    "dev": "html-bundle --hmr --secure",
     "prebuild": "node utils/prebuild.js",
     "build": "html-bundle --critical --csp",
     "serve": "html-bundle --serveOnly --secure",
+    "preview": "npm run build && npm run serve",
     "test": "wtr test/**/*.html --node-resolve --coverage",
     "update": "npx npm-check-updates -u && npm i && npm outdated"
   },
