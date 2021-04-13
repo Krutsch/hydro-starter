@@ -57,7 +57,7 @@ function imageHandler(files) {
   files.forEach((file) => {
     sharp(file)
       .webp({
-        quality: 60,
+        quality: 80,
       })
       .toFile(toBuildFile(file))
       .catch((err) => {

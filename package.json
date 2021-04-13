@@ -12,7 +12,6 @@
   },
   "dependencies": {
     "comlink": "^4.3.0",
-    "html-bundle": "^5.4.3",
     "hydro-js": "^1.2.14",
     "progressive-picture": "^2.0.0",
     "tailwindcss": "^2.1.1",
@@ -28,6 +27,7 @@
     "cssnano": "^5.0.0",
     "cssnano-preset-advanced": "^5.0.0",
     "glob": "^7.1.6",
+    "html-bundle": "^5.4.4",
     "node-json-minify": "^1.0.0",
     "postcss": "^8.2.10",
     "postcss-preset-env": "^6.7.0",
