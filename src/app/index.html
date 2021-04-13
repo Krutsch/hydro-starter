@@ -9,13 +9,7 @@
     unset,
   } from "hydro-js";
   document.head.append(
-    html`<link
-      rel="preload"
-      href="link/"
-      as="fetch"
-      type="text/html"
-      crossorigin
-    />`
+    <link rel="preload" href="link/" as="fetch" type="text/html" crossorigin />
   );
   import fetchHTML from "../@shared/fetchHTML.js";
 
