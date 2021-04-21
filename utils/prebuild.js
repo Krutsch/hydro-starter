@@ -16,7 +16,7 @@ const BUILD_FOLDER = "build";
 rmSync(BUILD_FOLDER, { recursive: true, force: true });
 
 glob("src/**/*.!(js|ts|html|css)", {}, (err, files) => {
-  if (err) throw err;
+  if (err) console.error(err);
 
   copyFiles(["src/_headers"]);
   copyFiles(files.filter((f) => f.endsWith(".ico")));
@@ -34,32 +34,34 @@ function copyFiles(files) {
 function jsonHandler(files) {
   files.forEach((file) =>
     writeFileSync(
-      toBuildFile(file),
+      getBuildPath(file),
       minifyJSON(readFileSync(file, { encoding: "utf-8" }))
     )
   );
 }
 
-function iconHandler(files) {
-  files.forEach((file) => {
+async function iconHandler(files) {
+  for (const file of files) {
+    const buildPath = createDir(file);
     sharp(file)
       .png({
         quality: 60,
       })
-      .toFile(toBuildFile(file))
+      .toFile(buildPath)
       .catch((err) => {
         console.error(err);
       });
-  });
+  }
 }
 
 function imageHandler(files) {
-  files.forEach((file) => {
+  for (const file of files) {
+    const buildPath = createDir(file);
     sharp(file)
       .webp({
         quality: 80,
       })
-      .toFile(toBuildFile(file))
+      .toFile(buildPath)
       .catch((err) => {
         console.error(err);
       });
@@ -73,26 +75,29 @@ function imageHandler(files) {
       .catch((err) => {
         console.error(err);
       });
-  });
+  }
 }
 
 function copyFile(file) {
-  const buildFile = toBuildFile(file);
-  const dir = buildFile.split("/").slice(0, -1).join("/");
-
-  mkdirSync(dir, { recursive: true });
-  copyFileSync(file, buildFile);
+  const buildPath = createDir(file);
+  copyFileSync(file, buildPath);
 }
 
-function toBuildFile(file) {
+function getBuildPath(file) {
   return file.replace(`${SOURCE_FOLDER}/`, `${BUILD_FOLDER}/`);
 }
 
+function createDir(file) {
+  const buildPath = getBuildPath(file);
+  const dir = buildPath.split("/").slice(0, -1).join("/");
+  mkdirSync(dir, { recursive: true });
+  return buildPath;
+}
+
 function toPreviewImage(file) {
-  const buildFile = toBuildFile(file);
-  const dir = buildFile.split("/");
+  const buildPath = getBuildPath(file);
+  const dir = buildPath.split("/");
   const base = dir.pop();
   dir.push(base.replace(/(.*)?\./, "$1-preview."));
-
   return dir.join("/");
 }

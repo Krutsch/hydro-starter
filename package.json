@@ -22,9 +22,9 @@
   },
   "devDependencies": {
     "@esm-bundle/chai": "^4.3.4",
-    "@web/test-runner": "^0.12.19",
+    "@web/test-runner": "^0.13.0",
     "autoprefixer": "^10.2.5",
-    "cssnano": "^5.0.0",
+    "cssnano": "^5.0.1",
     "cssnano-preset-advanced": "^5.0.0",
     "glob": "^7.1.6",
     "html-bundle": "^5.4.4",
