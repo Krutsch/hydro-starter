@@ -27,7 +27,7 @@
     "cssnano": "^5.0.2",
     "cssnano-preset-advanced": "^5.0.1",
     "glob": "^7.1.6",
-    "html-bundle": "^5.4.7",
+    "html-bundle": "^5.4.8",
     "node-json-minify": "^1.0.0",
     "postcss": "^8.2.13",
     "postcss-preset-env": "^6.7.0",
