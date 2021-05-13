@@ -11,7 +11,7 @@
     "update": "npx npm-check-updates -u && npm i && npm outdated"
   },
   "dependencies": {
-    "comlink": "^4.3.0",
+    "comlink": "^4.3.1",
     "hydro-js": "^1.4.0",
     "progressive-picture": "^2.0.0",
     "tailwindcss": "^2.1.2",
