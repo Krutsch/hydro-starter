@@ -25,7 +25,7 @@
     "@web/test-runner": "^0.13.4",
     "autoprefixer": "^10.2.5",
     "cssnano": "^5.0.3",
-    "cssnano-preset-advanced": "^5.0.1",
+    "cssnano-preset-advanced": "^5.1.0",
     "glob": "^7.1.7",
     "html-bundle": "^5.4.13",
     "node-json-minify": "^1.0.0",
