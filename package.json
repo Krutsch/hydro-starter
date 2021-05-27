@@ -12,7 +12,7 @@
   },
   "dependencies": {
     "comlink": "^4.3.1",
-    "hydro-js": "^1.4.2",
+    "hydro-js": "^1.4.3",
     "progressive-picture": "^2.0.2",
     "tailwindcss": "^2.1.2",
     "workbox-cacheable-response": "^6.1.5",
