@@ -12,7 +12,7 @@
   },
   "dependencies": {
     "comlink": "^4.3.1",
-    "hydro-js": "^1.4.1",
+    "hydro-js": "^1.4.2",
     "progressive-picture": "^2.0.2",
     "tailwindcss": "^2.1.2",
     "workbox-cacheable-response": "^6.1.5",
@@ -27,7 +27,7 @@
     "cssnano": "^5.0.4",
     "cssnano-preset-advanced": "^5.1.1",
     "glob": "^7.1.7",
-    "html-bundle": "^5.4.14",
+    "html-bundle": "^5.4.16",
     "node-json-minify": "^1.0.0",
     "postcss": "^8.3.0",
     "postcss-preset-env": "^6.7.0",
