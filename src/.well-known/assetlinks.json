@@ -1,0 +1,12 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "app.netlify.hydro_starter.twa",
+      "sha256_cert_fingerprints": [
+        "3A:BB:E4:B0:6A:45:D4:EC:5C:A6:C3:A8:B0:8F:B2:F8:C5:30:14:64:A6:47:D8:B4:5E:D1:A4:39:DB:00:75:21"
+      ]
+    }
+  }
+]
