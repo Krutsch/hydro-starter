@@ -24,7 +24,7 @@
     "@esm-bundle/chai": "^4.3.4",
     "@web/test-runner": "^0.13.5",
     "autoprefixer": "^10.2.6",
-    "cssnano": "^5.0.4",
+    "cssnano": "^5.0.5",
     "cssnano-preset-advanced": "^5.1.2",
     "glob": "^7.1.7",
     "html-bundle": "^5.4.16",
