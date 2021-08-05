@@ -17,8 +17,3 @@ A simple set-up.<br>
 - Image optimization
 - Web Test Runner
 - Hot Module Replacement
-
-## Roadmap
-
-- Router
-- stylelint
