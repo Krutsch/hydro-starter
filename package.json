@@ -31,7 +31,10 @@
     "node-json-minify": "^1.0.0",
     "postcss": "^8.3.11",
     "postcss-preset-env": "^6.7.0",
+    "postcss-reporter": "^7.0.4",
     "sharp": "^0.29.2",
+    "stylelint": "^14.0.1",
+    "stylelint-config-recommended": "^6.0.0",
     "typescript": "^4.4.4"
   }
 }

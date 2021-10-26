@@ -5,14 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <script type="module">
+      import { runTests } from "@web/test-runner-mocha";
       import { expect } from "@esm-bundle/chai";
-      import { $ } from "hydro-js";
       import fetchAndRun from "../utils/fetchAndRun.js";
 
-      fetchAndRun("../../build/link/", () => {
+      runTests(() => {
         describe("Link", () => {
-          it("returns 'Learn hydro-js'", () => {
-            expect($(".learn").textContent).to.equal("Learn hydro-js.");
+          it("returns 'Learn hydro-js'", async () => {
+            await fetchAndRun("../../build/link/");
+            expect(document.querySelector(".learn").textContent).to.equal(
+              "Learn hydro-js."
+            );
           });
         });
       });

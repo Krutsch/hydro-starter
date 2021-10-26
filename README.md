@@ -16,4 +16,5 @@ A simple set-up.<br>
 - JSX
 - Image optimization
 - Web Test Runner
+- Stylelint
 - Hot Module Replacement
