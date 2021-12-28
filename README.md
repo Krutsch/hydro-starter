@@ -16,4 +16,5 @@ A simple set-up.<br>
 - JSX
 - Image optimization
 - Web Test Runner
-- Hot Module Replacement
+- Bundler with Hot Module Replacement
+- Eslint

@@ -2,6 +2,7 @@
   "type": "module",
   "scripts": {
     "dev": "html-bundle --hmr --secure --handler utils/staticFiles.js",
+    "lint": "eslint src/**/*.{ts,js} --fix",
     "build": "html-bundle --critical --secure --handler utils/staticFiles.js",
     "preview": "npm run build && serve build --ssl-cert localhost.pem --ssl-key localhost-key.pem",
     "test": "wtr test/**/*.html --node-resolve --coverage",
@@ -19,10 +20,13 @@
   },
   "devDependencies": {
     "@esm-bundle/chai": "^4.3.4",
+    "@typescript-eslint/eslint-plugin": "^5.8.1",
+    "@typescript-eslint/parser": "^5.8.1",
     "@web/test-runner": "^0.13.23",
     "autoprefixer": "^10.4.0",
     "cssnano": "^5.0.14",
     "cssnano-preset-advanced": "^5.1.9",
+    "eslint": "^8.5.0",
     "html-bundle": "^6.0.2",
     "node-json-minify": "^3.0.0",
     "postcss": "^8.4.5",

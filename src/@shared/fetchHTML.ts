@@ -3,8 +3,8 @@ import { render, html, setShouldSetReactivity } from "hydro-js";
 export type fetchHTMLParams = {
   url: string;
   shouldRender?: boolean;
-  locator?: ReturnType<typeof document.querySelector> | string;
-  errorHandler?: Function;
+  locator?: Element | string;
+  errorHandler?: (e: Error) => void;
 };
 
 export default function fetchHTML({
@@ -18,7 +18,7 @@ export default function fetchHTML({
   }
   return fetch(url)
     .then((res) => res.text())
-    .then((t) => (shouldRender ? render(html`${t}`, locator!) : t))
+    .then((t) => (shouldRender ? render(html`${t}`, locator) : t))
     .catch((e) => errorHandler?.(e) || console.error(e))
     .finally(() => setShouldSetReactivity(true));
 }

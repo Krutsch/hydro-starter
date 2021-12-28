@@ -4,6 +4,10 @@ import { worker } from "../@types";
 // import * as Comlink from "comlink";
 
 // Meanwhile
+declare let Comlink: {
+  expose: (worker: unknown) => void;
+};
+
 importScripts("https://unpkg.com/comlink/dist/umd/comlink.min.js");
 
 const worker = {
@@ -18,5 +22,4 @@ const worker = {
   },
 } as worker;
 
-//@ts-ignore for now.
 Comlink.expose(worker);
