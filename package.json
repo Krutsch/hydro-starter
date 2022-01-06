@@ -22,7 +22,7 @@
     "@esm-bundle/chai": "^4.3.4",
     "@typescript-eslint/eslint-plugin": "^5.9.0",
     "@typescript-eslint/parser": "^5.9.0",
-    "@web/test-runner": "^0.13.24",
+    "@web/test-runner": "^0.13.25",
     "autoprefixer": "^10.4.1",
     "cssnano": "^5.0.14",
     "cssnano-preset-advanced": "^5.1.9",
