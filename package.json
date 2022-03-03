@@ -16,7 +16,7 @@
     "workbox-cacheable-response": "^6.5.1",
     "workbox-expiration": "^6.5.1",
     "workbox-routing": "^6.5.0",
-    "workbox-strategies": "^6.5.0"
+    "workbox-strategies": "^6.5.1"
   },
   "devDependencies": {
     "@esm-bundle/chai": "^4.3.4",
