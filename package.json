@@ -21,7 +21,7 @@
   "devDependencies": {
     "@esm-bundle/chai": "^4.3.4",
     "@typescript-eslint/eslint-plugin": "^5.19.0",
-    "@typescript-eslint/parser": "^5.19.0",
+    "@typescript-eslint/parser": "^5.20.0",
     "@web/test-runner": "^0.13.27",
     "autoprefixer": "^10.4.4",
     "cssnano": "^5.1.7",
