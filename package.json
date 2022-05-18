@@ -24,7 +24,7 @@
     "@typescript-eslint/parser": "^5.25.0",
     "@web/test-runner": "^0.13.27",
     "autoprefixer": "^10.4.5",
-    "cssnano": "^5.1.7",
+    "cssnano": "^5.1.8",
     "cssnano-preset-advanced": "^5.3.4",
     "eslint": "^8.15.0",
     "html-bundle": "^6.0.8",
