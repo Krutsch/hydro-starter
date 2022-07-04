@@ -22,7 +22,7 @@
   "devDependencies": {
     "@esm-bundle/chai": "^4.3.4",
     "@typescript-eslint/eslint-plugin": "^5.30.0",
-    "@typescript-eslint/parser": "^5.30.3",
+    "@typescript-eslint/parser": "^5.30.5",
     "@web/test-runner": "^0.13.31",
     "autoprefixer": "^10.4.7",
     "cssnano": "^5.1.12",
