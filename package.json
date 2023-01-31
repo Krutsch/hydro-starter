@@ -9,7 +9,7 @@
     "update": "npx npm-check-updates -u && npm i && npm outdated"
   },
   "dependencies": {
-    "comlink": "^4.3.1",
+    "comlink": "^4.4.0",
     "html-bundle": "^6.0.16",
     "hydro-js": "^1.5.13",
     "progressive-picture": "^2.0.5",
