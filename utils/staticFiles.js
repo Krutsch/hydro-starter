@@ -1,11 +1,10 @@
 import { mkdirSync, copyFileSync, writeFileSync, readFileSync } from "fs";
-import { sep } from "path";
 import sharp from "sharp";
 import minifyJSON from "node-json-minify";
 
 const SOURCE_FOLDER = "src";
 const BUILD_FOLDER = "build";
-const file = process.argv[2].replace(sep, "/");
+const file = process.argv[2];
 
 if (file === "src/_headers" || file.endsWith(".ico")) {
   copyFile(file);
