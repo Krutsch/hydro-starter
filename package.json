@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "comlink": "^4.4.1",
-    "html-bundle": "^6.0.16",
+    "html-bundle": "^6.0.17",
     "hydro-js": "^1.5.14",
     "progressive-picture": "^2.0.5",
     "tailwindcss": "^3.3.2",
@@ -22,7 +22,7 @@
   "devDependencies": {
     "@esm-bundle/chai": "^4.3.4",
     "@typescript-eslint/eslint-plugin": "^5.59.1",
-    "@typescript-eslint/parser": "^5.59.0",
+    "@typescript-eslint/parser": "^5.59.1",
     "@web/test-runner": "^0.16.1",
     "autoprefixer": "^10.4.14",
     "cssnano": "^6.0.0",
