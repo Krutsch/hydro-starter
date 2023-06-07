@@ -1,14 +1,5 @@
 import { worker } from "../@types";
-
-// If module worker are supported in Firefox and Safari
-// import * as Comlink from "comlink";
-
-// Meanwhile
-declare let Comlink: {
-  expose: (worker: unknown) => void;
-};
-
-importScripts("https://unpkg.com/comlink/dist/umd/comlink.min.js");
+import * as Comlink from "comlink";
 
 const worker = {
   fib(n: number) {

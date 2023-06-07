@@ -6,15 +6,13 @@
     <meta name="Description" content="Starter App for hydro-js" />
     <title>hydro-js App</title>
 
-    <link rel="preconnect" href="https://unpkg.com/" />
     <link rel="preload" href="app/" as="fetch" type="text/html" crossorigin />
     <link
-      rel="prefetch"
+      rel="modulepreload"
       href="@shared/workerCode.js"
-      as="worker"
+      as="script"
       type="application/javascript"
     />
-    <!-- preload as worker does not work in Chrome (https://bugs.chromium.org/p/chromium/issues/detail?id=946510) -->
 
     <link rel="apple-touch-icon" href="@public/icon192.png" />
     <link rel="manifest" href="manifest.json" />
