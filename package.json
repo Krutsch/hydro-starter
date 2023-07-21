@@ -29,7 +29,7 @@
     "cssnano-preset-advanced": "^6.0.1",
     "eslint": "^8.45.0",
     "node-json-minify": "^3.0.0",
-    "postcss": "^8.4.26",
+    "postcss": "^8.4.27",
     "postcss-preset-env": "^9.0.0",
     "postcss-reporter": "^7.0.5",
     "serve": "^14.2.0",
