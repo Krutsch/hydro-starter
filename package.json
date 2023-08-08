@@ -30,7 +30,7 @@
     "eslint": "^8.46.0",
     "node-json-minify": "^3.0.0",
     "postcss": "^8.4.27",
-    "postcss-preset-env": "^9.1.0",
+    "postcss-preset-env": "^9.1.1",
     "postcss-reporter": "^7.0.5",
     "serve": "^14.2.0",
     "sharp": "^0.32.4",
