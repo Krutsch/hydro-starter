@@ -27,7 +27,7 @@
     "autoprefixer": "^10.4.16",
     "cssnano": "^6.0.2",
     "cssnano-preset-advanced": "^6.0.2",
-    "eslint": "^8.55.0",
+    "eslint": "^8.56.0",
     "node-json-minify": "^3.0.0",
     "postcss": "^8.4.32",
     "postcss-preset-env": "^9.3.0",
