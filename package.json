@@ -29,7 +29,7 @@
     "eslint": "^8.56.0",
     "html-bundle": "^6.0.22",
     "node-json-minify": "^3.0.0",
-    "postcss": "^8.4.33",
+    "postcss": "^8.4.34",
     "postcss-preset-env": "^9.3.0",
     "postcss-reporter": "^7.1.0",
     "serve": "^14.2.1",
