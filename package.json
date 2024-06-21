@@ -34,6 +34,6 @@
     "postcss-reporter": "^7.1.0",
     "serve": "^14.2.3",
     "sharp": "^0.33.4",
-    "typescript": "^5.4.5"
+    "typescript": "^5.5.2"
   }
 }
