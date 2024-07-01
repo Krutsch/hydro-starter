@@ -30,7 +30,7 @@
     "html-bundle": "^6.1.2",
     "node-json-minify": "^3.0.0",
     "postcss": "^8.4.38",
-    "postcss-preset-env": "^9.5.14",
+    "postcss-preset-env": "^9.5.15",
     "postcss-reporter": "^7.1.0",
     "serve": "^14.2.3",
     "sharp": "^0.33.4",
