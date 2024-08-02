@@ -23,7 +23,8 @@
       import "progressive-picture";
 
       fetchAndRender({ url: "app/", shouldRender: true });
-      if (navigator.serviceWorker) navigator.serviceWorker.register("sw.js");
+      if (navigator.serviceWorker)
+        navigator.serviceWorker.register("sw.js", { type: "module" });
     </script>
     <link rel="stylesheet" href="@public/base.css" />
   </head>
