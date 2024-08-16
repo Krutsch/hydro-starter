@@ -36,7 +36,7 @@
     "postcss-preset-env": "^10.0.1",
     "postcss-reporter": "^7.1.0",
     "serve": "^14.2.3",
-    "sharp": "^0.33.4",
+    "sharp": "^0.33.5",
     "typescript": "^5.5.4"
   }
 }
