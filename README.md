@@ -9,12 +9,10 @@ A simple set-up.<br>
 
 - hydro-js
 - Comlink
-- TypeScript
-- Tailwind CSS
-- PostCSS
+- TailwindCSS with PostCSS
 - PWA
-- JSX
+- JSX & TypeScript
 - Image optimization
-- Web Test Runner
 - Bundler with Hot Module Replacement
-- Eslint
+- Prettier & ESLint
+- Web Test Runner

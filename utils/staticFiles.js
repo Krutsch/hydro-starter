@@ -11,7 +11,7 @@ if (file === "src/_headers" || file.endsWith(".ico")) {
 } else if (file.endsWith(".json")) {
   writeFileSync(
     getBuildPath(file),
-    minifyJSON(readFileSync(file, { encoding: "utf-8" }))
+    minifyJSON(readFileSync(file, { encoding: "utf-8" })),
   );
 } else if (/icon\d+\.png/.test(file)) {
   const buildPath = createDir(file);

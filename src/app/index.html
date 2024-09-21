@@ -9,18 +9,18 @@
     unset,
   } from "hydro-js";
   document.head.append(
-    <link rel="preload" href="link/" as="fetch" type="text/html" crossorigin />
+    <link rel="preload" href="link/" as="fetch" type="text/html" crossorigin />,
   );
   import fetchHTML from "../@shared/fetchHTML.js";
 
   const Link = reactive(
-    fetchHTML({ url: "link/", errorHandler: () => unset(Link) })
+    fetchHTML({ url: "link/", errorHandler: () => unset(Link) }),
   );
   render(
-    <main class="m-auto center text-center">
+    <main class="center m-auto text-center">
       <picture>
         <img
-          class="object-contain rounded-none sm:rounded-3xl mb-6"
+          class="mb-6 rounded-none object-contain sm:rounded-3xl"
           src="@public/splash-preview.webp"
           data-src="@public/splash.webp"
           height="350"
@@ -32,7 +32,7 @@
       <h1 class="text-white">Edit app/index.html and save to reload!</h1>
       {ternary(Link, () => html`${getValue(Link)}`, <p>Loading ...</p>)}
     </main>,
-    "main.center"
+    "main.center",
   );
 </script>
 

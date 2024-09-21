@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -13,8 +13,8 @@
         describe("Link", () => {
           it("returns 'Learn hydro-js'", async () => {
             await fetchAndRun("../../build/link/");
-            expect(document.querySelector(".learn").textContent).to.equal(
-              "Learn hydro-js."
+            expect(document.querySelector("a").textContent).to.equal(
+              "Learn hydro-js.",
             );
           });
         });

@@ -19,7 +19,7 @@ registerRoute(
         statuses: [200],
       }),
     ],
-  })
+  }),
 );
 
 // Cache assets with StaleWhileRevalidate
@@ -36,7 +36,7 @@ registerRoute(
         statuses: [200],
       }),
     ],
-  })
+  }),
 );
 
 // Cache images with CacheFirst and 7 days expiration time
@@ -53,5 +53,5 @@ registerRoute(
         maxAgeSeconds: 60 * 60 * 24 * 7,
       }),
     ],
-  })
+  }),
 );

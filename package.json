@@ -2,8 +2,9 @@
   "type": "module",
   "scripts": {
     "start": "html-bundle --hmr --secure --handler utils/staticFiles.js",
-    "lint": "eslint src/**/*.{ts,js} --fix",
     "build": "html-bundle --isCritical --handler utils/staticFiles.js",
+    "lint": "eslint --flag unstable_ts_config src/**/*.{ts,js,mjs,jsx,tsx} --fix",
+    "format": "prettier --write .",
     "preview": "npm run build && serve build --ssl-cert localhost.pem --ssl-key localhost-key.pem",
     "test": "wtr test/**/*.html --node-resolve --coverage",
     "update": "npx npm-check-updates -u && npm i && npm outdated"
@@ -12,18 +13,14 @@
     "comlink": "^4.4.1",
     "hydro-js": "^1.5.20",
     "progressive-picture": "^2.0.5",
-    "tailwindcss": "^3.4.12",
     "workbox-cacheable-response": "^7.1.0",
     "workbox-expiration": "^7.1.0",
     "workbox-routing": "^7.1.0",
     "workbox-strategies": "^7.1.0"
   },
   "devDependencies": {
-    "@eslint/eslintrc": "^3.1.0",
     "@eslint/js": "^9.11.0",
     "@esm-bundle/chai": "^4.3.4",
-    "@typescript-eslint/eslint-plugin": "^8.6.0",
-    "@typescript-eslint/parser": "^8.6.0",
     "@web/test-runner": "^0.19.0",
     "autoprefixer": "^10.4.20",
     "cssnano": "^7.0.6",
@@ -33,10 +30,12 @@
     "html-bundle": "^6.1.6",
     "node-json-minify": "^3.0.0",
     "postcss": "^8.4.47",
-    "postcss-preset-env": "^10.0.3",
-    "postcss-reporter": "^7.1.0",
+    "prettier": "^3.3.3",
+    "prettier-plugin-tailwindcss": "^0.6.6",
     "serve": "^14.2.3",
     "sharp": "^0.33.5",
-    "typescript": "^5.6.2"
+    "tailwindcss": "^3.4.12",
+    "typescript": "^5.6.2",
+    "typescript-eslint": "^8.6.0"
   }
 }

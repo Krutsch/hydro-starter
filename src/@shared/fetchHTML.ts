@@ -4,21 +4,25 @@ export type fetchHTMLParams = {
   url: string;
   shouldRender?: boolean;
   locator?: Element | string;
-  errorHandler?: (e: Error) => void;
+  errorHandler: (e: unknown) => void;
 };
 
-export default function fetchHTML({
+export default async function fetchHTML({
   url,
   shouldRender,
   locator,
-  errorHandler,
+  errorHandler = console.error,
 }: fetchHTMLParams) {
   if (shouldRender) {
     setShouldSetReactivity(false);
   }
-  return fetch(url)
-    .then((res) => res.text())
-    .then((t) => (shouldRender ? render(html`${t}`, locator) : t))
-    .catch((e) => errorHandler?.(e) || console.error(e))
-    .finally(() => setShouldSetReactivity(true));
+  try {
+    const res = await fetch(url);
+    const t = await res.text();
+    return shouldRender ? render(html`${t}`, locator) : t;
+  } catch (e) {
+    errorHandler(e);
+  } finally {
+    setShouldSetReactivity(true);
+  }
 }
