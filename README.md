@@ -15,4 +15,4 @@ A simple set-up.<br>
 - JSX & TypeScript
 - Bundler with Hot Module Replacement
 - Prettier & ESLint
-- Web Test Runner
+- Playwright with Accessibility Tests

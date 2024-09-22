@@ -2,3 +2,7 @@ build
 node_modules
 coverage
 localhost*.pem
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/

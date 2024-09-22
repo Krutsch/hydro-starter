@@ -3,9 +3,9 @@
   "scripts": {
     "start": "html-bundle --hmr --secure --handler utils/staticFiles.js",
     "build": "html-bundle --isCritical --handler utils/staticFiles.js",
-    "lint": "eslint --flag unstable_ts_config src/**/*.{ts,js,mjs,jsx,tsx} --fix",
+    "lint": "eslint --flag unstable_ts_config src/**/*.{ts,js,mjs,jsx,tsx} --fix && tsc --noEmit",
     "format": "prettier --write .",
-    "test": "wtr test/**/*.html --node-resolve --coverage",
+    "test": "playwright test",
     "update": "npx npm-check-updates -u && npm i && npm outdated"
   },
   "dependencies": {
@@ -18,9 +18,11 @@
     "workbox-strategies": "^7.1.0"
   },
   "devDependencies": {
+    "@axe-core/playwright": "^4.10.0",
     "@eslint/js": "^9.11.0",
     "@esm-bundle/chai": "^4.3.4",
-    "@web/test-runner": "^0.19.0",
+    "@playwright/test": "^1.47.2",
+    "@types/node": "^22.5.5",
     "autoprefixer": "^10.4.20",
     "cssnano": "^7.0.6",
     "cssnano-preset-advanced": "^7.0.6",
