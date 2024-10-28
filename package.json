@@ -28,7 +28,7 @@
     "cssnano-preset-advanced": "^7.0.6",
     "eslint": "^9.13.0",
     "globals": "^15.11.0",
-    "html-bundle": "^6.1.7",
+    "html-bundle": "^6.1.8",
     "node-json-minify": "^3.0.0",
     "postcss": "^8.4.47",
     "prettier": "^3.3.3",
