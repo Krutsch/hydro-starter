@@ -18,7 +18,7 @@
     "workbox-strategies": "^7.3.0"
   },
   "devDependencies": {
-    "@axe-core/playwright": "^4.10.0",
+    "@axe-core/playwright": "^4.10.1",
     "@eslint/js": "^9.14.0",
     "@esm-bundle/chai": "^4.3.4",
     "@playwright/test": "^1.48.2",
