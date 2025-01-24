@@ -4,8 +4,7 @@ const isProduction = process.env.NODE_ENV === "production";
 
 export default {
   plugins: {
-    tailwindcss: {},
-    autoprefixer: {},
+    "@tailwindcss/postcss": {},
     ...(isProduction
       ? {
           cssnano: {

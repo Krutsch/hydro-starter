@@ -1,14 +1,12 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
 @layer base {
   picture > img {
-    @apply block h-auto max-w-full blur-0;
+    @apply block h-auto max-w-full blur-none;
     transition: filter 0.7s ease-in;
   }
   picture > img[data-src] {
-    @apply blur-sm;
+    @apply blur-xs;
   }
   picture > img.img-progressive {
     @apply w-auto;
