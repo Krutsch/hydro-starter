@@ -19,7 +19,7 @@
   },
   "devDependencies": {
     "@axe-core/playwright": "^4.10.1",
-    "@eslint/js": "^9.19.0",
+    "@eslint/js": "^9.20.0",
     "@esm-bundle/chai": "^4.3.4",
     "@playwright/test": "^1.50.1",
     "@tailwindcss/postcss": "^4.0.4",
