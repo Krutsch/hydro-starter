@@ -31,7 +31,7 @@
     "globals": "^15.15.0",
     "html-bundle": "^6.1.8",
     "node-json-minify": "^3.0.0",
-    "postcss": "^8.5.2",
+    "postcss": "^8.5.3",
     "prettier": "^3.5.1",
     "prettier-plugin-tailwindcss": "^0.6.11",
     "sharp": "^0.33.5",
