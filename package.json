@@ -24,7 +24,7 @@
     "@playwright/test": "^1.51.0",
     "@tailwindcss/postcss": "^4.0.12",
     "@types/node": "^22.13.9",
-    "autoprefixer": "^10.4.20",
+    "autoprefixer": "^10.4.21",
     "cssnano": "^7.0.6",
     "cssnano-preset-advanced": "^7.0.6",
     "eslint": "^9.21.0",
