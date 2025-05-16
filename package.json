@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "comlink": "^4.4.2",
-    "hydro-js": "^1.8.2",
+    "hydro-js": "^1.8.3",
     "progressive-picture": "^2.0.5",
     "workbox-cacheable-response": "^7.3.0",
     "workbox-expiration": "^7.3.0",
