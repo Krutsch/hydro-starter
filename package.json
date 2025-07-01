@@ -23,7 +23,7 @@
     "@esm-bundle/chai": "^4.3.4",
     "@playwright/test": "^1.53.2",
     "@tailwindcss/postcss": "^4.1.11",
-    "@types/node": "^24.0.6",
+    "@types/node": "^24.0.7",
     "autoprefixer": "^10.4.21",
     "cssnano": "^7.0.7",
     "cssnano-preset-advanced": "^7.0.7",
