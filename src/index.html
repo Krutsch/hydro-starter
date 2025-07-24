@@ -20,7 +20,9 @@
 
     <script type="module" nonce="8IBTHwOdqNKAWeKl7plt8g==">
       import fetchAndRender from "./@shared/fetchHTML.js";
-      import "progressive-picture";
+      import { observe } from "progressive-picture";
+
+      observe();
 
       fetchAndRender({ url: "app/", shouldRender: true });
       if (navigator.serviceWorker)
