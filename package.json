@@ -37,6 +37,6 @@
     "sharp": "^0.34.4",
     "tailwindcss": "^4.1.14",
     "typescript": "^5.9.3",
-    "typescript-eslint": "^8.45.0"
+    "typescript-eslint": "^8.46.0"
   }
 }
