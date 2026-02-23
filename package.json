@@ -27,7 +27,7 @@
     "autoprefixer": "^10.4.24",
     "cssnano": "^7.1.2",
     "cssnano-preset-advanced": "^7.0.10",
-    "eslint": "^9.39.2",
+    "eslint": "^10.0.2",
     "globals": "^17.3.0",
     "html-bundle": "^6.2.0",
     "node-json-minify": "^3.0.0",
