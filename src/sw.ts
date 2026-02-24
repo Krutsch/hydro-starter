@@ -25,7 +25,6 @@ registerRoute(
 // Cache assets with StaleWhileRevalidate
 registerRoute(
   ({ request }) =>
-    request.url.includes(".js") ||
     request.destination === "style" ||
     request.destination === "script" ||
     request.destination === "worker",

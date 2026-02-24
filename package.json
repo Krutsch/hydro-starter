@@ -1,9 +1,12 @@
 {
+  "name": "hydro-starter",
+  "version": "1.0.0",
+  "description": "A starter Web App for hydro-js",
   "type": "module",
   "scripts": {
     "start": "html-bundle --hmr --secure --handler utils/staticFiles.js",
     "build": "html-bundle --isCritical --handler utils/staticFiles.js",
-    "lint": "eslint --flag unstable_ts_config src/**/*.{ts,js,mjs,jsx,tsx} --fix && tsc --noEmit",
+    "lint": "eslint src/**/*.{ts,js,mjs,jsx,tsx} --fix && tsc --noEmit",
     "format": "prettier --write .",
     "test": "playwright test",
     "update": "npx npm-check-updates -u && npm i && npm outdated"
@@ -19,15 +22,14 @@
   },
   "devDependencies": {
     "@axe-core/playwright": "^4.11.1",
-    "@eslint/js": "^9.39.2",
+    "@eslint/js": "^10.0.1",
     "@esm-bundle/chai": "^4.3.4",
     "@playwright/test": "^1.58.2",
-    "@tailwindcss/postcss": "^4.2.0",
+    "@tailwindcss/postcss": "^4.2.1",
     "@types/node": "^25.3.0",
-    "autoprefixer": "^10.4.24",
     "cssnano": "^7.1.2",
     "cssnano-preset-advanced": "^7.0.10",
-    "eslint": "^9.39.2",
+    "eslint": "^10.0.2",
     "globals": "^17.3.0",
     "html-bundle": "^6.2.0",
     "node-json-minify": "^3.0.0",
@@ -35,8 +37,8 @@
     "prettier": "^3.8.1",
     "prettier-plugin-tailwindcss": "^0.7.2",
     "sharp": "^0.34.5",
-    "tailwindcss": "^4.2.0",
+    "tailwindcss": "^4.2.1",
     "typescript": "^5.9.3",
-    "typescript-eslint": "^8.56.0"
+    "typescript-eslint": "^8.56.1"
   }
 }
