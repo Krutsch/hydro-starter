@@ -30,7 +30,7 @@
     "cssnano": "^7.1.5",
     "cssnano-preset-advanced": "^7.0.12",
     "eslint": "^10.2.0",
-    "globals": "^17.4.0",
+    "globals": "^17.5.0",
     "html-bundle": "^6.2.2",
     "node-json-minify": "^3.0.0",
     "postcss": "^8.5.9",
