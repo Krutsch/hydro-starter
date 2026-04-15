@@ -34,7 +34,7 @@
     "html-bundle": "^6.2.2",
     "node-json-minify": "^3.0.0",
     "postcss": "^8.5.10",
-    "prettier": "^3.8.2",
+    "prettier": "^3.8.3",
     "prettier-plugin-tailwindcss": "^0.7.2",
     "sharp": "^0.34.5",
     "tailwindcss": "^4.2.2",
