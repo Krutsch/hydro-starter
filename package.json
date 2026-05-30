@@ -29,7 +29,7 @@
     "@types/node": "^25.9.1",
     "cssnano": "^8.0.1",
     "cssnano-preset-advanced": "^8.0.1",
-    "eslint": "^10.4.0",
+    "eslint": "^10.4.1",
     "globals": "^17.6.0",
     "html-bundle": "^6.2.3",
     "node-json-minify": "^3.0.0",
