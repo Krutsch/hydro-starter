@@ -25,7 +25,7 @@
       observe();
 
       fetchAndRender({ url: "app/", shouldRender: true });
-      if (navigator.serviceWorker)
+      if (navigator.serviceWorker && process.env.NODE_ENV === "production")
         navigator.serviceWorker.register("sw.js", { type: "module" });
     </script>
     <link rel="stylesheet" href="@public/base.css" />
