@@ -11,6 +11,7 @@ export default defineConfig({
   reporter: "html",
   use: {
     baseURL: url,
+    ignoreHTTPSErrors: true,
     trace: "on-first-retry",
   },
   projects: [
