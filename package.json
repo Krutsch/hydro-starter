@@ -24,7 +24,7 @@
     "@axe-core/playwright": "^4.12.1",
     "@eslint/js": "^10.0.1",
     "@esm-bundle/chai": "^4.3.4",
-    "@playwright/test": "^1.62.0",
+    "@playwright/test": "^1.62.1",
     "@tailwindcss/postcss": "^4.3.3",
     "@types/node": "^26.1.2",
     "cssnano": "^8.0.2",
