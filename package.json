@@ -27,7 +27,7 @@
     "@playwright/test": "^1.62.1",
     "@tailwindcss/postcss": "^4.3.3",
     "@types/node": "^26.2.0",
-    "cssnano": "^8.0.4",
+    "cssnano": "^8.0.5",
     "cssnano-preset-advanced": "^8.0.4",
     "eslint": "^10.8.1",
     "globals": "^17.9.0",
