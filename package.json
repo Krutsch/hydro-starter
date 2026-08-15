@@ -13,15 +13,15 @@
   },
   "dependencies": {
     "comlink": "^4.4.2",
-    "hydro-js": "^1.9.4",
-    "progressive-picture": "^3.2.1",
+    "hydro-js": "^1.9.5",
+    "progressive-picture": "^3.2.2",
     "workbox-cacheable-response": "^7.4.1",
     "workbox-expiration": "^7.4.1",
     "workbox-routing": "^7.4.1",
     "workbox-strategies": "^7.4.1"
   },
   "devDependencies": {
-    "@axe-core/playwright": "^4.12.1",
+    "@axe-core/playwright": "^4.13.0",
     "@eslint/js": "^10.0.1",
     "@esm-bundle/chai": "^4.3.4",
     "@playwright/test": "^1.62.1",
@@ -30,7 +30,7 @@
     "cssnano": "^8.0.5",
     "cssnano-preset-advanced": "^8.0.5",
     "eslint": "^10.8.1",
-    "globals": "^17.9.0",
+    "globals": "^17.11.0",
     "html-bundle": "^6.6.4",
     "node-json-minify": "^3.0.0",
     "postcss": "^8.5.26",
@@ -42,6 +42,6 @@
     "typescript-eslint": "^8.67.0"
   },
   "allowScripts": {
-    "esbuild@0.28.1": true
+    "esbuild": true
   }
 }
