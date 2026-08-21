@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "start": "html-bundle --hmr --secure --handler utils/staticFiles.js",
-    "build": "html-bundle --isCritical --handler utils/staticFiles.js",
+    "build": "html-bundle --isCritical --handler utils/staticFiles.js && node utils/generate-csp-hashes.mjs",
     "lint": "eslint src/**/*.{ts,js,mjs,jsx,tsx} --fix && tsc --noEmit",
     "format": "prettier --write .",
     "test": "playwright test",
@@ -33,6 +33,7 @@
     "globals": "^17.11.0",
     "html-bundle": "^6.6.4",
     "node-json-minify": "^3.0.0",
+    "parse5": "^8.0.1",
     "postcss": "^8.5.26",
     "prettier": "^3.9.6",
     "prettier-plugin-tailwindcss": "^0.8.1",

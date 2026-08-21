@@ -16,3 +16,9 @@ A simple set-up.<br>
 - Bundler with Hot Module Replacement
 - Prettier & ESLint
 - Playwright with Accessibility Tests
+
+## Build security
+
+`npm run build` computes CSP SHA-256 hashes from every final HTML document,
+including the dynamic `build/app/index.html` fragment, and writes them to
+`build/_headers`. Deploy the generated HTML and headers from the same build.
