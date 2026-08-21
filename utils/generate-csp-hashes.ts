@@ -1,7 +1,24 @@
-import crypto from "node:crypto";
-import fs from "node:fs";
-import path from "node:path";
+import { createHash } from "node:crypto";
+import * as fs from "node:fs";
+import * as path from "node:path";
 import { parse, parseFragment } from "parse5";
+
+interface HtmlNode {
+  attrs?: Array<{ name: string; value: string }>;
+  childNodes?: HtmlNode[];
+  content?: HtmlNode;
+  sourceCodeLocation?: {
+    endTag?: { startOffset: number };
+    startTag?: { endOffset: number };
+  };
+  tagName?: string;
+}
+
+interface Hashes {
+  attributes: Set<string>;
+  file: string;
+  scripts: Set<string>;
+}
 
 const buildDirectory = path.resolve("build");
 const headersPath = path.join(buildDirectory, "_headers");
@@ -14,8 +31,8 @@ const executableScriptTypes = new Set([
   "text/javascript",
 ]);
 
-function collectHtmlFiles(directory) {
-  const files = [];
+function collectHtmlFiles(directory: string): string[] {
+  const files: string[] = [];
   for (const name of fs.readdirSync(directory)) {
     const filePath = path.join(directory, name);
     if (fs.statSync(filePath).isDirectory()) {
@@ -27,29 +44,32 @@ function collectHtmlFiles(directory) {
   return files.sort();
 }
 
-function hashSource(source) {
-  return `'sha256-${crypto.createHash("sha256").update(source, "utf8").digest("base64")}'`;
+function hashSource(source: string): string {
+  return `'sha256-${createHash("sha256").update(source, "utf8").digest("base64")}'`;
 }
 
-function parseHtml(source) {
+function parseHtml(source: string): HtmlNode {
   const isDocument = /^\s*(?:<!doctype\s+html|<html\b)/i.test(source);
   const options = { sourceCodeLocationInfo: true };
-  return isDocument ? parse(source, options) : parseFragment(source, options);
+  return (isDocument
+    ? parse(source, options)
+    : parseFragment(source, options)) as unknown as HtmlNode;
 }
 
-function visit(node, source, hashes) {
+function visit(node: HtmlNode, source: string, hashes: Hashes): void {
+  const attributes = node.attrs ?? [];
   if (node.tagName === "script") {
-    const attributes = new Map(
-      node.attrs.map(({ name, value }) => [name, value]),
+    const attributeMap = new Map<string, string>(
+      attributes.map(({ name, value }) => [name, value]),
     );
-    if (attributes.has("nonce")) {
+    if (attributeMap.has("nonce")) {
       throw new Error(
         `Static build contains a nonce attribute in ${hashes.file}`,
       );
     }
 
-    const type = (attributes.get("type") ?? "").trim().toLowerCase();
-    if (!attributes.has("src") && executableScriptTypes.has(type)) {
+    const type = (attributeMap.get("type") ?? "").trim().toLowerCase();
+    if (!attributeMap.has("src") && executableScriptTypes.has(type)) {
       const location = node.sourceCodeLocation;
       if (!location?.startTag || !location.endTag) {
         throw new Error(
@@ -64,7 +84,7 @@ function visit(node, source, hashes) {
     }
   }
 
-  for (const { name, value } of node.attrs ?? []) {
+  for (const { name, value } of attributes) {
     if (/^on[a-z]/i.test(name)) hashes.attributes.add(hashSource(value));
   }
 
@@ -72,8 +92,8 @@ function visit(node, source, hashes) {
   if (node.content) visit(node.content, source, hashes);
 }
 
-function collectHashes(files) {
-  const hashes = {
+function collectHashes(files: string[]): Hashes {
+  const hashes: Hashes = {
     scripts: new Set(),
     attributes: new Set(),
     file: "",
@@ -89,7 +109,7 @@ function collectHashes(files) {
   return hashes;
 }
 
-function replaceScriptPolicy(headers, hashes) {
+function replaceScriptPolicy(headers: string, hashes: Hashes): string {
   const newline = headers.includes("\r\n") ? "\r\n" : "\n";
   const lines = headers.split(/\r?\n/);
   const policyLines = lines.filter((line) =>
@@ -142,7 +162,7 @@ function replaceScriptPolicy(headers, hashes) {
   return result;
 }
 
-function writeAtomically(filePath, contents) {
+function writeAtomically(filePath: string, contents: string): void {
   const temporaryPath = `${filePath}.${process.pid}.tmp`;
   try {
     fs.writeFileSync(temporaryPath, contents, "utf8");
@@ -154,8 +174,9 @@ function writeAtomically(filePath, contents) {
 
 if (!fs.existsSync(headersPath)) throw new Error(`Missing ${headersPath}`);
 const htmlFiles = collectHtmlFiles(buildDirectory);
-if (htmlFiles.length === 0)
+if (htmlFiles.length === 0) {
   throw new Error(`No HTML files found in ${buildDirectory}`);
+}
 const hashes = collectHashes(htmlFiles);
 const headers = fs.readFileSync(headersPath, "utf8");
 writeAtomically(headersPath, replaceScriptPolicy(headers, hashes));
