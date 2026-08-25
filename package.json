@@ -28,7 +28,7 @@
     "@tailwindcss/postcss": "^4.3.3",
     "@types/node": "^26.2.0",
     "cssnano": "^8.0.7",
-    "cssnano-preset-advanced": "^8.0.7",
+    "cssnano-preset-advanced": "^8.0.8",
     "eslint": "^10.9.0",
     "globals": "^17.11.0",
     "html-bundle": "^6.6.4",
