@@ -1,6 +1,7 @@
 import { defineConfig, devices } from "@playwright/test";
 
-const url = "https://localhost:5000";
+const port = 51137;
+const url = `http://localhost:${port}`;
 
 export default defineConfig({
   testDir: "./tests",
@@ -11,7 +12,6 @@ export default defineConfig({
   reporter: "html",
   use: {
     baseURL: url,
-    ignoreHTTPSErrors: true,
     trace: "on-first-retry",
   },
   projects: [
@@ -42,10 +42,13 @@ export default defineConfig({
 
   webServer: [
     {
-      command: "npm start",
+      command: "npm exec -- html-bundle --hmr --handler utils/staticFiles.js",
       url: url,
-      ignoreHTTPSErrors: true,
-      reuseExistingServer: true,
+      env: {
+        HYDRO_TEST_SERVER_PORT: String(port),
+        HYDRO_BUILD_DIR: "playwright/.cache/build",
+      },
+      reuseExistingServer: false,
     },
   ],
 });

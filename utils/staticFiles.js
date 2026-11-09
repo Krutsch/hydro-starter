@@ -3,7 +3,7 @@ import sharp from "sharp";
 import minifyJSON from "node-json-minify";
 
 const SOURCE_FOLDER = "src";
-const BUILD_FOLDER = "build";
+const BUILD_FOLDER = process.env.HYDRO_BUILD_DIR || "build";
 const file = process.argv[2];
 
 if (file === "src/_headers" || file.endsWith(".ico")) {
